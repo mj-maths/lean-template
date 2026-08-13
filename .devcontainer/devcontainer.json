@@ -2,11 +2,7 @@
   "name": "Lean 4",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
 
-  "features": {
-    "ghcr.io/devcontainers/features/common-utils:2": {}
-  },
-
-  "onCreateCommand": "curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh -s -- -y --default-toolchain none && echo 'export PATH=\"$HOME/.elan/bin:$PATH\"' >> ~/.bashrc",
+  "onCreateCommand": "curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh -s -- -y --default-toolchain none",
 
   "postCreateCommand": "$HOME/.elan/bin/lake build",
 
@@ -20,5 +16,7 @@
         "leanprover.lean4"
       ]
     }
+  }
+}
   }
 }
